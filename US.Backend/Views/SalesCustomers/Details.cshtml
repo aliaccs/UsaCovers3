@@ -1,0 +1,98 @@
+﻿@model US.Common.Models.SalesCustomers
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SalesCustomers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RefNum1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RefNum1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Custom1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Custom1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateSH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateSH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotSales)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotSales)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotGen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotGen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RF1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RF1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RF2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RF2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RF3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RF3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RF4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RF4)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

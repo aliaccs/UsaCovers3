@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UsaCovers.Views.PendingOrdersPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+           
+    Title=" UsaCovers Pending Orders" 
+           >
+
+    <ContentPage.Content>
+
+        <StackLayout
+            BindingContext="{Binding PendingOrders}">
+            <SearchBar
+                Text="{Binding Filter, Mode=TwoWay}"
+                Placeholder="Search Order # or Supplier"
+                SearchCommand="{Binding SearchCommand}">
+
+            </SearchBar>
+
+            <ListView
+                
+                HasUnevenRows="True"               
+            
+                IsPullToRefreshEnabled="True"
+                ItemsSource="{Binding PendingOrders}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Frame
+                                CornerRadius="20"
+                                HasShadow="true"
+                                Margin="5">
+                                <Grid>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="* "></RowDefinition>
+                                    <RowDefinition Height="* "></RowDefinition>
+                                   
+
+                                </Grid.RowDefinitions>
+
+                               
+
+
+
+                                <Label
+                                    FontSize="12"
+                                    FontAttributes="Bold"                                    
+                                    Grid.Row="0"
+                                    Text="{Binding RefNum}"
+                                    HorizontalOptions="Center"
+                                     >
+                                </Label>
+                                <Label
+                                    FontSize="12"
+                                    FontAttributes="Bold"                                    
+                                    Grid.Row="1"
+                                    HorizontalOptions="Start"
+                                    Text="{Binding Supplier}"
+                                     >
+                                </Label>
+                                <Label
+                                   FontSize="12"
+                                    Grid.Row="1"
+                                    HorizontalOptions="End"
+                                    Text="{Binding Custo}">
+                                </Label>
+                                <Label
+                                    FontSize="12"
+                                    Grid.Row="2"
+                                    HorizontalOptions="Start"
+                                    Text="{Binding DateOrder , StringFormat='Order Date:{0:d}'}">
+                                </Label>
+                                <Label
+                                    FontSize="12"
+                                    Grid.Row="2"
+                                    HorizontalOptions="End"
+                                     Text="{Binding DeliveryDate , StringFormat='Delivery:{0:d}'}">
+                                </Label>
+                                <Label
+                                    FontSize="12"
+                                    Grid.Row="3"
+                                    TextColor="Green"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding Amount , StringFormat='Amount:{0:c2}'}">
+                                </Label>
+
+
+                            </Grid>
+                                </Frame>
+                        </ViewCell>
+                            
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

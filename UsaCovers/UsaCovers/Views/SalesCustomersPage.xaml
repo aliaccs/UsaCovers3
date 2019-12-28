@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UsaCovers.Views.SalesCustomersPage"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+  
+    Title="UsaCovers !!!" 
+          >
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding Sales}">
+            
+            <SearchBar
+                Text="{Binding Filter, Mode=TwoWay}"
+                FontSize="Small"
+                Placeholder="Search PO# Or Customer"
+                SearchCommand="{Binding SearchCommand}">
+            
+                            </SearchBar>
+             
+            <ListView
+                             
+                HasUnevenRows="True"               
+                IsPullToRefreshEnabled="False"
+                ItemsSource="{Binding Sales}">
+
+                <ListView.ItemTemplate>
+                                    
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                CornerRadius="20"
+                                HasShadow="true"
+                                Margin="5">
+
+                                <Grid>
+
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                       
+                                    </Grid.RowDefinitions>
+
+                                    <!--<Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>-->
+
+                                    <Label
+                                    FontSize="10"
+                                    FontAttributes="Bold"  
+                                    HorizontalOptions="Center"
+                                    TextColor="DarkGray"
+                                    
+                                    Grid.Row="0"
+                                    Text="{Binding RefNum1}"
+                                     >
+                                    </Label>
+                                    
+                                    <Label
+                                   FontSize="10"
+                                    Grid.Row="1"
+                                    Text="{Binding Custom1 }">
+                                    </Label>
+                                    
+                                    <Label
+                                    FontSize="10"
+                                    Grid.Row="2"
+                                    HorizontalOptions="Start"
+                                    Text="{Binding DateOR , StringFormat='Order Date:{0:d}'}">
+                                    </Label>
+                                    
+                                    <Label
+                                    FontSize="10"
+                                        HorizontalOptions="End"
+                                    Grid.Row="2"
+                                     Text="{Binding DateSH , StringFormat='Delivery:{0:d}'}">
+                                    </Label>
+                                    
+                                    
+                                    <Label
+                                     FontSize="10"                                                           
+                                     Grid.Row="3"                                   
+                                     HorizontalOptions="Center"
+                                    Text="{Binding TotSales , StringFormat='Amount:{0:c2}'}">
+                                    </Label>
+
+
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+      

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:UsaCovers"
+             x:Class="UsaCovers.MainPage"
+              Title="UsaCovers"  >
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Label Text="Main Menu" FontSize="Medium"             
+                HorizontalOptions="Center" />
+            <Button x:Name="btnSalesPage"  BackgroundColor="Red"  Text="Customer Sales" Clicked="BtnSalesPage_Clicked"/>
+            <Button x:Name="btnPendingPage"  BackgroundColor="Red"  Text="Pending Orders" Clicked="BtnPendingPage_Clicked"/>
+         
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
