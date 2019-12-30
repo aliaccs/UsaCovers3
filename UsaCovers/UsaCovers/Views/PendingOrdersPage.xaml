@@ -13,7 +13,7 @@
             BindingContext="{Binding PendingOrders}">
             <SearchBar
                 Text="{Binding Filter, Mode=TwoWay}"
-                Placeholder="Search Order # or Supplier"
+                Placeholder="Search Order # // Supplier"
                 SearchCommand="{Binding SearchCommand}">
 
             </SearchBar>
@@ -47,7 +47,7 @@
 
 
                                 <Label
-                                    FontSize="12"
+                                    FontSize="13"
                                     FontAttributes="Bold"                                    
                                     Grid.Row="0"
                                     Text="{Binding RefNum}"
