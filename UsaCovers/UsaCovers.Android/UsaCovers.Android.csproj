@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
@@ -96,7 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UsaCovers\UsaCovers.csproj">
-      <Project>{DC115E4C-95B5-46B6-8A4E-F972BF75A00C}</Project>
+      <Project>{61A2CD75-D4D8-48A4-993F-CB7CB0FAF0B3}</Project>
       <Name>UsaCovers</Name>
     </ProjectReference>
   </ItemGroup>
