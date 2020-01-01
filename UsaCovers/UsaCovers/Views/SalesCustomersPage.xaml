@@ -13,8 +13,8 @@
             <SearchBar
                 Text="{Binding Filter, Mode=TwoWay}"
                 FontSize="Small"
-                Placeholder="Search PO# /// Customer..."
-                SearchCommand="{Binding SearchCommand}">
+                Placeholder="Search PO# // Customer..."
+               SearchCommand="{Binding SearchCommand}">
             
                             </SearchBar>
              
